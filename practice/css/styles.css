@@ -1,0 +1,38 @@
+/* Default values */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+img{
+    width: 100%;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* header */
+header{
+
+}
+
+header > nav{
+
+}
+.main-nav{
+
+}
+.main-nav > li > a{
+    
+}
+
+/* main */
+
+
+/* footer */
