@@ -51,7 +51,30 @@ header > nav {
     box-shadow: 0 0 7px white;
 }
 
+.main-nav > li > a:hover {
+    color: #FFEBAC;
+    background-color: #FF7D25;
+}
+
 /* main */
 
 
 /* footer */
+
+@media screen and (min-width: 991px) {
+   #menu-icon {
+    display: none;
+   }
+
+   .main-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+   }
+
+   .main-nav > li > a {
+    background-color: unset;
+    color: #FF7D25;
+    margin-right: 20px;
+   }
+}
