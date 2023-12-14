@@ -1,35 +1,54 @@
 /* Default values */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100vw;
+    background-color: #FFFDF6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-img{
+
+img {
     width: 100%;
 }
-ul, li{
+
+ul, li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
 /* header */
-header{
+header {
 
 }
 
-header > nav{
+header > nav {
 
 }
-.main-nav{
 
+.main-nav {
+    /* display: none; */
 }
-.main-nav > li > a{
-    
+
+.main-nav > li {
+    height: 40px;
+    display: flex;
+}
+
+.main-nav > li > a {
+    color: #FFFDF6;
+    background-color: #4E8065;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 7px white;
 }
 
 /* main */
