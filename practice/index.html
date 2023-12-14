@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Karen Sturgeon">
     <title>Elements</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -13,6 +12,7 @@
 <body>
     <header>
         <nav>
+            <div id="menu-icon">&#9776</div>
             <ul class="main-nav">
                 <li><a href="">Home</a></li>
                 <li><a href="">Link 1</a></li>
@@ -24,7 +24,22 @@
     </header>
     <main>
         <aside>
-
+            <h1>Text Header</h1>
+            <div class="img-txt">
+                <img src="https://placehold.co/600x400" alt="">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing
+                     elit. Eveniet vitae consectetur eaque eos 
+                     praesentium ex enim repudiandae magni illum
+                      quae facere sequi amet facilis assumenda 
+                      voluptas deleniti est, quos neque.
+                </p>
+            </div>
+            <div class="img-btn">
+                <button>
+                    Button
+                </button>
+            </div>
         </aside>
         <section>
 
@@ -35,5 +50,12 @@
         <div></div>
         <div></div>
     </footer>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var nav = document.querySelector('.main-nav');
+            nav.classList.toggle('show');
+
+        })
+    </script>
 </body>
 </html>
