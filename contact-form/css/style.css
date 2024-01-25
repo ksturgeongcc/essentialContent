@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 60%;
+
+    background: url(../rss/bg-img-text.jpg);
+
+    color: #fff;
+}
+
+.social__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.text__button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: cadetblue;
+    align-self: center;
+}
+
+.text__button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#envelope {
+    margin-right: 10px;
+}
+
+.text__lorem {
+    width: 400px;
+    align-self: center;
+    margin: 20px 0;
+}
+
+.textTwo__lorem {
+    width: 400px;
+    align-self: center;
+    margin: 0 0 20px 0;
+}
+
+.map__icon {
+    margin-top: 20px;
+}
+
+.social__icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.form__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 40%;
+    color: #9e9e9e;
+}
+
+.h1__form {
+    text-transform: uppercase;
+    width: 400px;
+    font-size: 48px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.form__form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.form__form label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form__form input {
+    height: 30px;
+}
+
+#button__form {
+    margin-top: 20px;
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: cadetblue;
+    align-self: center;
+    text-transform: uppercase;
+    color: #fff;
+}
