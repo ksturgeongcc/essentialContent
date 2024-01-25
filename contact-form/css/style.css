@@ -121,3 +121,20 @@ body {
     text-transform: uppercase;
     color: #fff;
 }
+
+.map__hidden {
+    display: none;
+}
+
+.map__hidden iframe {
+    height: 100vh;
+    width: 50%;
+}
+
+.close__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 18px;
+}
+
