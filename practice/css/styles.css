@@ -1,12 +1,32 @@
+/* variables */
+:root{
+    --heading-font: 'Passion One', sans-serif;
+    
+}
+
 /* Default values */
+
+/* 
+    removing the dafault padding and margin, our browsers automatically add these
+    we remove them so we are in full control of our website 
+*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
+/* ensures that the with of the page is the same as the width of the device you are viewing it on */
 body{
-    width: 100vw;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+
+
 }
 img{
     width: 100%;
@@ -17,26 +37,43 @@ ul, li{
 a{
     text-decoration: none;
 }
+/* 
+    when creating a site we should always think 'Mobile First', the first section of the css will focus on the look for mobile, but it will also
+    have css that will apply to all views
 
-/* header */
-header{
+     header section inlcuding naviation
 
+    this is the 'hamburger' icon that dispalys on mobile and tablet view */
+#menu-icon{
+    width: 100%;
+    font-size: 30px;
+    padding: 3%;
+    display: flex;
+    justify-content: end;
+    background: white;
 }
-
-header > nav{
-
-}
+/* the main container for the navigation, This looks different on mobile view
+    It's default state is to be hidden on mobile view and should only show when the icon is clicked.
+    Javascript controls when the state of this changes. This has been added on the HTML page.
+*/
 .main-nav{
+    background: black;
     display: none;
+    height: 100vh;
+    flex-direction: column;
 }
+/* 
+    this class is activated on the click on the 'hamburger' icon this getS added to the main navigation so that it shows on mobile view
+*/
 .show{
-    display: unset;
+    display: flex;
 }
+/* giving each of the menu items a fixed height */
 .main-nav > li{
     height: 40px;
     display: flex;
-   
 }
+/* styling the anchor element */
 .main-nav > li > a{
     color: yellow;
     background-color: black;
@@ -46,54 +83,316 @@ header > nav{
     align-items: center;
     box-shadow: 0 0 7px white;
 }
+/* changing the look of the anchor on hover */
 .main-nav > li > a:hover{
     color: black;
     background-color: yellow;
 }
 
 
-/* main */
+/* the main container for the heading elelement of the page */
+/* 
+    background image
+    fixed height as there is no real content to define its height
+*/
+.parallax{
+    background-image: url(../images/parallax.jpg);
+    height: 400px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    position: relative;
+    background-attachment: fixed;
+    align-items: center;
+}
+/* creating a rounded div to house the website logo */
+.parallax > .logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+}
+/* placement of the button in the parallax section*/
+.parallax > button {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 16px 30px;
+    width: auto;
+    margin-bottom: 3%;
+    text-transform: uppercase;
+    border: none;
+}
 
-
+main{
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+main > section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+section > div{
+    width: 90%;
+    margin-top: 6%;
+}
+section > p {
+    margin-top: 3%;
+}
 /* aside */
 aside{
     display: none;
 }
-
-
-/* footer */
-@media screen and (min-width:991px){
-   #menu-icon{
-        display: none;
-   }
-   .main-nav{
-    display: flex;
-    justify-content: flex-end;
+.img-btn{
     width: 100%;
-   }
-   .main-nav > li > a{
-    background-color: unset;
-    color: black;
-    margin-right: 20px;
-   }
-   /* aside */
-   aside {
+    height: 400px;
+    background-image: url('https://placehold.co/600x400');
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    width: 30%;
-   }
-   h1{
+    justify-content: end;
+    align-items: center;
+}
+.img-txt > p{
+    margin-top: 4%;
+}
+.img-btn > button{
+    padding: 2% 4%;
+    margin-bottom: 3%;
+}
+/* 
+    CONTACT PAGE
+*/
+.contact-wrapper{
+   
+    padding: unset;
+    display: flex;
+    flex-direction: column;
+}
+.contact-details{
+    width: 100%;
+    background-image: url(../images/contact_bg.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    color: white;
+}
+.header h2{
+    font-family: 'Rubik Moonrocks', sans-serif;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 2px;
+    margin-bottom: 30px
+}
+.header h1{
+    text-transform: uppercase;
+    font-family: var(--heading-font);
+}
+.contact-form{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.email, .map{
+    text-align: center;
+    width: 60%;
+    margin-bottom: 20px;
+}
+.map i:hover{
+    color: cornflowerblue;
+    cursor: pointer;
 
-   }
-   .img-txt{
 
-   }
-   .img-btn{
+}
+.email p{
+    margin-bottom: 20px;
+}
+.email a{
+    background: cornflowerblue;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+}
+.icon i{
+    font-size: 1.3rem;
+}
+.contact-details > p{
+    font-size: 0.8rem;
+}
+i{
+    margin-right: 10px;
+}
+.socials a {
+    font-size: 1.5rem;
+    color: white;
+}
+.socials a:hover {
+    color: cornflowerblue;
+}
+/* form */
+form{
+    display: flex;
+    flex-direction: column;
+    width: 85%
+}
+.contact-form h3{
+    font-size: 1.8rem;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    color: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 60%;
+    text-align: center;
+}
+.form-element{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.form-element button{
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    padding: 10px 0
+}
+label{
+    margin-bottom: 10px;
+    color: grey;
+}
+input{
+    border: grey 1px solid;
+    padding: 10px 5px
+}
+/* modal */
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+
+}
+.street-view, .google-map{
+    width: 100%;
+}
+.close{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    background: white;
+    padding: 5px 15px;
+    box-shadow: 0 0 10px grey;
+
+}
+iframe{
+    height: 100vh;
+    width: 100%;
+
+}
+
+/* adjust the size of the containers on mid size screens */
+@media screen and (min-width:767px){
+    section > div {
+        width: 45%;
+    }
+    .contact-wrapper{
+        flex-direction: row;
+        height: 100vh;
+    }
+    .contact-details{
+        width: 60%;
+    }
+    .contact-form{
+        width: 40%;
+    }
+    .modal{
+        flex-direction: unset;
+    }
+}
+
+@media screen and (min-width:991px){
+    #menu-icon{
+            display: none;
+    }
+    nav{
+        height: unset;
+        padding-right: 4%;
+    }
+    .main-nav{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        flex-direction: row;
+        background: unset;
+        height: unset;
+    }
+    .main-nav > li > a{
+        background-color: unset;
+        color: black;
+        margin-right: 20px;
+    }
+    /* main */
+    main > section{
+        width: 65%;
+    }
+    /* aside */
+    aside {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        border: 1px solid grey;
+        padding: 1%;
+        justify-content: space-between;
+    }
+    aside > h1{
+        text-align: center;
+        margin-bottom: 10px;
+        }
+    .img-txt{
+        margin-bottom: 30px;
+        }
+    section > div {
+        width: 40%;
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .img-txt{
+        margin-bottom: 30px;
+    }
+    .img-btn{
         width: 100%;
         height: 400px;
         background-image: url('https://placehold.co/600x400');
         background-size: cover;
         background-position: center;
-   }
+    }
 
 }
+
+
+
