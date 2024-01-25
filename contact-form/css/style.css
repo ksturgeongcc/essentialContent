@@ -5,8 +5,10 @@
 }
 
 body {
+    position: relative;
     font-family: 'Kanit', sans-serif;
     height: 100vh;
+    z-index: 0;
 }
 
 .container {
@@ -123,18 +125,28 @@ body {
 }
 
 .map__hidden {
+    position: absolute;
     display: none;
+    flex-direction: row;
 }
 
 .map__hidden iframe {
     height: 100vh;
-    width: 50%;
+    width: 50vw;
 }
 
-.close__btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 18px;
+iframe {
+    z-index: 1;
+    border: none;
+}
+
+#close__btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    padding: 10px;
+    background-color: #fff;
+    display: block;
 }
 
