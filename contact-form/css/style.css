@@ -14,6 +14,12 @@ body {
 .container {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
 }
 
 .text__div {
@@ -150,3 +156,33 @@ iframe {
     display: block;
 }
 
+.navi {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    background-color: rgb(128, 27, 27);
+}
+
+.navi-ul li {
+    display: inline-block;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.25rem;
+    transition: 1s;
+}
+
+.navi-ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.navi-ul li:hover {
+    background-color: #fff;
+}
+
+.navi-ul li a:hover {
+    color: rgb(128, 27, 27);
+}
