@@ -34,7 +34,17 @@ const validateForm = () => {
         nameErr.style.fontSize = '16px';
         nameErr.textContent = 'Value cannot be empty';
         event.preventDefault();
+        return false;
     }
+
+    const namePattern = /^[a-zA-Z ]+$/;
+    if (!namePattern.test(name)) {
+        nameErr.style.color = 'red';
+        nameErr.style.fontSize = '16px';
+        nameErr.textContent = 'Please only include letters';
+        event.preventDefault();
+        return false;
+    };
 
     // email val
 
@@ -43,7 +53,17 @@ const validateForm = () => {
         emailErr.style.fontSize = '16px';
         emailErr.textContent = 'Value cannot be empty';
         event.preventDefault();
+        return false;
     }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        emailErr.style.color = 'red';
+        emailErr.style.fontSize = '16px';
+        emailErr.textContent = 'Please only include letters';
+        event.preventDefault();
+        return false;
+    };
 
     // msg val
 
@@ -52,9 +72,75 @@ const validateForm = () => {
         messageErr.style.fontSize = '16px';
         messageErr.textContent = 'Value cannot be empty';
         event.preventDefault();
+        return false;
     }
 
+     // Form is valid, save data to local storage
+    saveDataLocally(name, email, message);
+
+    // Redirect to confirmation.html
+    window.location.href = 'confirmation.html';
+
+    return false; // Prevent the form from submitting traditionally
 }
 
-// nav code
+function saveDataLocally(name, email, message) {
+    // Create an object to represent the form data
+    var formData = {
+        name: name,
+        email: email,
+        message: message,
+    };
 
+    // Convert the object to a JSON string and save to local storage
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+}
+///////////////////////////////////// returning data from local storage to confirmation page ////////////////////////////////////////
+
+// Retrieve data from local storage
+var storedData = localStorage.getItem('formData');
+// Display the stored data
+if (storedData) {
+    var parsedData = JSON.parse(storedData);
+    document.getElementById('storedName').textContent = parsedData.name;
+    document.getElementById('storedEmail').textContent = parsedData.email;
+    document.getElementById('storedMessage').textContent = parsedData.message;
+                                                     
+} else {
+    document.getElementById('storedData').textContent = "No data stored.";
+}
+
+
+
+// retrieve the date and put it into a container with the ID storedData - no real formatting here
+// if (storedData) {
+//     var parsedData = JSON.parse(storedData);
+//     document.getElementById('storedData').textContent = "Name: " + parsedData.name + 
+//                                                       ", Email: " + parsedData.email + 
+//                                                       ", Message: " + parsedData.message;
+// } else {
+//     document.getElementById('storedData').textContent = "No data stored.";
+// }
+
+
+
+
+////////////////////////////////////    MODAL   ////////////////////////////////////////
+
+document.getElementById('map-marker').addEventListener('click', function() {
+    var popup = document.querySelector('.modal');
+    popup.style.display = "flex";
+
+    document.getElementById('close').addEventListener('click', function() {
+        var close = document.querySelector('.modal');
+        popup.style.display = "none";
+    });
+});
+
+// navigation
+document.getElementById('menu-icon').addEventListener('click', function() {
+    var nav = document.querySelector('.main-nav');
+    nav.classList.toggle('show');
+
+});
