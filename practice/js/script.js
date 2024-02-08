@@ -14,9 +14,19 @@ function validateForm(){
         document.getElementById('nameError').textContent = 'Value cannot be empty';
         return false;
     }
+    let namePattern = /^[a-zA-Z ]+$/;
+    if(!namePattern.test(name)){
+        document.getElementById('nameError').textContent = 'Please only include letters';
+        return false;
+    }
+
 
     // email validation
-
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(email)){
+        document.getElementById('emailError').textContent = 'Please enter a valid email';
+        return false;
+    }
     // message validation
 }
 
