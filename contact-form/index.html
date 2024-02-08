@@ -66,13 +66,16 @@
                 <h1 class="h1__form">
                     use the form to get in touch
                 </h1>
-                <form action="" class="form__form">
+                <form action="" class="form__form" onsubmit="validateForm()">
                     <label for="name">Enter your name:</label>
-                    <input type="text" id="name" name="name" maxlength="64" placeholder="e.g: joe bloggs" required>
+                    <input type="text" id="name" name="name" maxlength="64" placeholder="e.g: joe bloggs" >
+                    <span id="nameError"></span>
                     <label for="email">Enter your email:</label>
-                    <input type="text" id="email" name="email" maxlength="64" placeholder="e.g: myemail@mail.com" required>
+                    <input type="text" id="email" name="email" maxlength="64" placeholder="e.g: myemail@mail.com" >
+                    <span id="emailError"></span>
                     <label for="message">Enter your message:</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" maxlength="64" placeholder="" ></textarea>
+                    <span id="messageError"></span>
                     <button type="submit" id="button__form">send message</button>
                 </form>
             </div>

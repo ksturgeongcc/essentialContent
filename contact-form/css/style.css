@@ -157,7 +157,7 @@ iframe {
 }
 
 .navi {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     justify-items: center;
@@ -169,6 +169,7 @@ iframe {
     font-family: 'Kanit', sans-serif;
     font-size: 1.25rem;
     transition: 1s;
+    text-transform: uppercase;
 }
 
 .navi-ul li a {
@@ -185,4 +186,11 @@ iframe {
 
 .navi-ul li a:hover {
     color: rgb(128, 27, 27);
+}
+
+.navi__btn span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
 }
