@@ -69,22 +69,18 @@
         </div>
         <div class="contact-form">
             <h3>Use the form to get in touch</h3>
-            <form action="" onsubmit="return validateForm()">
+            <form action="">
                 <div class="form-element">
                     <label for="name">Enter your name</label>
-                    <input type="text" id="name" placeholder="eg: joe bloggs">
-                    <span id="nameError"></span>
+                    <input type="text" placeholder="eg: joe bloggs" minlength="5" maxlength="10" required>
                 </div>
                 <div class="form-element">
                     <label for="email">Enter your email</label>
-                    <input type="email" id="email" placeholder="eg: joe bloggs" >
-                    <span id="emailError"></span>
+                    <input type="email" placeholder="eg: joe bloggs" required>
                 </div>
                 <div class="form-element">
                     <label for="message">Enter your message</label>
-                    <textarea name="" id="message" cols="30" rows="10" placeholder="" maxlength="500"></textarea>
-                    <span id="messageError"></span>
-
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="" maxlength="500" ></textarea>
                 </div>
                 <div class="form-element">
                     <button type="submit">SEND MESSAGE</button>
@@ -108,6 +104,24 @@
 
 
     </div>
-    <script src="js/script.js"></script>
+    <script>
+        // modal
+        document.getElementById('map-marker').addEventListener('click', function() {
+            var popup = document.querySelector('.modal');
+            popup.style.display = "flex";
+      
+            document.getElementById('close').addEventListener('click', function() {
+                var close = document.querySelector('.modal');
+                popup.style.display = "none";
+            });
+        });
+
+        // navigation
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var nav = document.querySelector('.main-nav');
+            nav.classList.toggle('show');
+
+        });
+    </script>
 </body>
 </html>

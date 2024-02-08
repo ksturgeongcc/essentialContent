@@ -5,7 +5,9 @@
 }
 
 /* Default values */
-
+input:invalid{
+    border: red 1px solid;
+}
 /* 
     removing the dafault padding and margin, our browsers automatically add these
     we remove them so we are in full control of our website 
@@ -50,7 +52,7 @@ a{
     padding: 3%;
     display: flex;
     justify-content: end;
-    background: white;
+    background: #ffd573;
 }
 /* the main container for the navigation, This looks different on mobile view
     It's default state is to be hidden on mobile view and should only show when the icon is clicked.
@@ -265,6 +267,11 @@ form{
     display: flex;
     flex-direction: column;
     margin: 10px 0;
+}
+.form-element span{
+    color: red;
+    font-weight: bold;
+    
 }
 .form-element button{
     color: white;
