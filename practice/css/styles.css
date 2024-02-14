@@ -211,6 +211,14 @@ aside{
     flex-direction: column;
     margin-top: 20px;
 }
+/* confirmation */
+.confirmation span{
+    color: green;
+    font-weight: bold;
+}
+.confirmation p{
+    margin-bottom: 10px;
+}
 .email, .map{
     text-align: center;
     width: 60%;
