@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c962addeea.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navi" id="navi">
+            <ul class="navi-ul">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">My recipes</a></li>
+                <li><a href="#">My personality</a></li>
+                <li><a href="#">My hobbies</a></li>
+                <li><a href="#">My photos</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="menu__btn" onclick="hide__showMenu()">
+                <span class="btn__span">&#x2630</span>
+            </div>
+
+            <div class="text__div">
+                <h1 class="h1__text">KAREN'S KITCHEN</h1>
+                <div class="text__lorem">
+                    <h2 class="h2__text">
+                        Get in touch with us
+                    </h2>
+                    <p class="pOne__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus maiores minima, delectus soluta aperiam doloribus numquam, ipsa explicabo quod et consectetur harum! Quo, ullam a repellat nihil commodi alias.
+                    </p>
+                </div>
+                <button class="text__button"><a href="mailto:email@example.com"> <i class="fa-regular fa-envelope" id="envelope"></i> send us an email</a></button>
+                <div onclick="hide__show()" class="map__icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="textTwo__lorem">
+                    <p class="pTwo__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut unde iusto et nostrum! Non sequi nam eligendi nihil, natus, minima officiis dolorem doloribus facilis modi enim dolor at, in corrupti!
+                    </p>
+                </div>
+                <div class="social__icons">
+                    <div class="social__icon">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <div class="social__icon">
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="social__icon">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="social__icon">
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <div class="social__icon">
+                        <a href=""><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="form__div">
+                <h1 class="h1__form">
+                    use the form to get in touch
+                </h1>
+                <form action="" class="form__form" onsubmit="validateForm()">
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" maxlength="64" placeholder="e.g: joe bloggs" >
+                    <span id="nameError"></span>
+                    <label for="email">Enter your email:</label>
+                    <input type="text" id="email" name="email" maxlength="64" placeholder="e.g: myemail@mail.com" >
+                    <span id="emailError"></span>
+                    <label for="message">Enter your message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" maxlength="64" placeholder="" ></textarea>
+                    <span id="messageError"></span>
+                    <button type="submit" id="button__form">send message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map__hidden" id="map__hidden">
+            <div onclick="hide__show()" id="close__btn">
+                &#x2715
+            </div>
+            <div id="map__embed">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.073376097565!2d-4.263855065883598!3d55.826685687031315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488846fac7512f97%3A0x97841ecc6b9f0395!2sGlasgow%20Clyde%20College%20-%20Langside%20Campus!5e0!3m2!1sen!2suk!4v1706195020170!5m2!1sen!2suk"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div id="streetView">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1706195137006!6m8!1m7!1sXWvKfXMMrPQlEJPO3AY9vQ!2m2!1d55.82589899541185!2d-4.264458752310908!3f41.65709533947935!4f1.3310103242553453!5f0.7820865974627469" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

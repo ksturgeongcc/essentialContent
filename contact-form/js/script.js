@@ -10,7 +10,6 @@ const hide__show = () => {
     }
   }
 
-
 // form validation
 
 const validateForm = () => {
@@ -27,7 +26,7 @@ const validateForm = () => {
     const email = document.getElementById('email').value.trim();
     const msg = document.getElementById('message').value.trim();
 
-    // name val
+// name val
 
     if (name === '') {
         nameErr.style.color = 'red';
@@ -46,7 +45,7 @@ const validateForm = () => {
         return false;
     };
 
-    // email val
+// email val
 
     if (email === '') {
         emailErr.style.color = 'red';
@@ -75,10 +74,10 @@ const validateForm = () => {
         return false;
     }
 
-     // Form is valid, save data to local storage
+// Form is valid, save data to local storage
     saveDataLocally(name, email, message);
 
-    // Redirect to confirmation.html
+// Redirect to confirmation.html
     window.location.href = 'confirmation.html';
 
     return false; // Prevent the form from submitting traditionally
@@ -144,3 +143,14 @@ document.getElementById('menu-icon').addEventListener('click', function() {
     nav.classList.toggle('show');
 
 });
+
+// hammenu
+
+const hide__showMenu = () => {
+    let navElement = document.getElementById('navi');
+    if (navElement.style.display === "none") {
+        navElement.style.display = "flex";
+    } else {
+        navElement.style.display = "none";
+    }
+}
