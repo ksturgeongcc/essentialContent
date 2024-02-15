@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Web tutorials">
     <meta name="author" content="Karen Sturgeon">
-    <title>Elements</title>
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c92e82a337.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<!--  -->
 <body>
     <header>
         <nav>
@@ -22,100 +25,18 @@
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
-        <!-- The heading section at the top of the page -->
-        <!-- the container with the class 'parallax' will have a background image that will stay fixed when scrolling down the page -->
-        <div class="parallax">
-            <!-- We will create a rounded 'div' that will be our logo -->
-            <div class="logo">
-                My Site
-            </div>
-            <!-- add a button that will take the user to another page -->
-            <button type="button">
-                Read More
-            </button>
-        </div>
     </header>
-    <main>
-        <aside>
-            <h1>Text Header</h1>
-            <div class="img-txt">
-                <img src="https://placehold.co/600x400" alt="">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing
-                     elit. Eveniet vitae consectetur eaque eos 
-                     praesentium ex enim repudiandae magni illum
-                      quae facere sequi amet facilis assumenda 
-                      voluptas deleniti est, quos neque.
-                </p>
-            </div>
-            <div class="img-btn">
-                <button type="button">
-                    Button
-                </button>
-            </div>
-        </aside>
-        <section>
-            <div>
-                <div class="img-txt">
-                    <img src="https://placehold.co/600x400" alt="">
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                         elit. Eveniet vitae consectetur eaque eos 
-                         praesentium ex enim repudiandae magni illum
-                          quae facere sequi amet facilis assumenda 
-                          voluptas deleniti est, quos neque.
-                    </p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                         elit. Eveniet vitae consectetur eaque eos 
-                         praesentium ex enim repudiandae magni illum
-                          quae facere sequi amet facilis assumenda 
-                          voluptas deleniti est, quos neque.
-                    </p>
+    <main class="landing_wrapper">
+        <section class="top">
+            <div class="overlay">
+                <div>
+                    <h1>Karen's Kitchen</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus fugiat voluptatem aut architecto magni dolorum dicta, nemo voluptatibus harum, cumque suscipit sed! Molestiae labore harum rem ipsa maxime impedit beatae!</p>
                 </div>
-                <div class="img-btn">
-                    <button type="button">
-                        Button
-                    </button>
-                </div>
-            </div>
-            <div>
-                <div class="img-txt">
-                    <img src="https://placehold.co/600x400" alt="">
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                         elit. Eveniet vitae consectetur eaque eos 
-                         praesentium ex enim repudiandae magni illum
-                          quae facere sequi amet facilis assumenda 
-                          voluptas deleniti est, quos neque.
-                    </p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                         elit. Eveniet vitae consectetur eaque eos 
-                         praesentium ex enim repudiandae magni illum
-                          quae facere sequi amet facilis assumenda 
-                          voluptas deleniti est, quos neque.
-                    </p>
-                </div>
-                <div class="img-btn">
-                    <button type="button">
-                        Button
-                    </button>
-                </div>
-            </div>
+                   </div>
         </section>
+        <section></section>
     </main>
-    <footer>
-        <div></div>
-        <div></div>
-        <div></div>
-    </footer>
-    <script>
-        document.getElementById('menu-icon').addEventListener('click', function() {
-            var nav = document.querySelector('.main-nav');
-            nav.classList.toggle('show');
-
-        })
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

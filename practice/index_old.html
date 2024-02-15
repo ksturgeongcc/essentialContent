@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="author" content="Karen Sturgeon">
+    <title>Elements</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<!--  -->
+<body>
+    <header>
+        <nav>
+            <!--  &#9776 translated to the hamburger menu-->
+            <div id="menu-icon">&#9776</div>
+            <ul class="main-nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- The heading section at the top of the page -->
+        <!-- the container with the class 'parallax' will have a background image that will stay fixed when scrolling down the page -->
+        <div class="parallax">
+            <!-- We will create a rounded 'div' that will be our logo -->
+            <div class="logo">
+                My Site
+            </div>
+            <!-- add a button that will take the user to another page -->
+            <button type="button">
+                Read More
+            </button>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <h1>Text Header</h1>
+            <div class="img-txt">
+                <img src="https://placehold.co/600x400" alt="">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing
+                     elit. Eveniet vitae consectetur eaque eos 
+                     praesentium ex enim repudiandae magni illum
+                      quae facere sequi amet facilis assumenda 
+                      voluptas deleniti est, quos neque.
+                </p>
+            </div>
+            <div class="img-btn">
+                <button type="button">
+                    Button
+                </button>
+            </div>
+        </aside>
+        <section>
+            <div>
+                <div class="img-txt">
+                    <img src="https://placehold.co/600x400" alt="">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                         elit. Eveniet vitae consectetur eaque eos 
+                         praesentium ex enim repudiandae magni illum
+                          quae facere sequi amet facilis assumenda 
+                          voluptas deleniti est, quos neque.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                         elit. Eveniet vitae consectetur eaque eos 
+                         praesentium ex enim repudiandae magni illum
+                          quae facere sequi amet facilis assumenda 
+                          voluptas deleniti est, quos neque.
+                    </p>
+                </div>
+                <div class="img-btn">
+                    <button type="button">
+                        Button
+                    </button>
+                </div>
+            </div>
+            <div>
+                <div class="img-txt">
+                    <img src="https://placehold.co/600x400" alt="">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                         elit. Eveniet vitae consectetur eaque eos 
+                         praesentium ex enim repudiandae magni illum
+                          quae facere sequi amet facilis assumenda 
+                          voluptas deleniti est, quos neque.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                         elit. Eveniet vitae consectetur eaque eos 
+                         praesentium ex enim repudiandae magni illum
+                          quae facere sequi amet facilis assumenda 
+                          voluptas deleniti est, quos neque.
+                    </p>
+                </div>
+                <div class="img-btn">
+                    <button type="button">
+                        Button
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var nav = document.querySelector('.main-nav');
+            nav.classList.toggle('show');
+
+        })
+    </script>
+</body>
+</html>
