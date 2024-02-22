@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url('../rss/bg-img.jpg');
+    width: 100%;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 4rem;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    width: 40%;
+}
+
+ul li {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+
+    margin-left: 3%;
+
+    transition: 0.5s;
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul li:hover {
+    color: red;
+}

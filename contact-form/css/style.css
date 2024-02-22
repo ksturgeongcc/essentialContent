@@ -228,3 +228,15 @@ iframe {
     color: #fff;
     font-weight: 700;
 }
+
+.bot p {
+    color: rgb(128, 27, 27);
+}
+
+.top p {
+    color: rgb(128, 27, 27);;
+}
+
+p {
+    font-weight: 700;
+}
